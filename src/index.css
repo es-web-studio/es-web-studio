@@ -1,0 +1,110 @@
+@import "tailwindcss";
+
+@theme {
+  --color-deep-navy: #0A1329;
+  --color-tech-purple: #7A32FF;
+  --color-electric-cyan: #00E5FF;
+  --color-silver-gray: #C0C0C0;
+  --color-accent-orange: #FF8A00;
+  --color-premium-pink: #FF32A9;
+
+  --background-image-brand-gradient: linear-gradient(135deg, #7A32FF 0%, #00E5FF 100%);
+  --background-image-warm-gradient: linear-gradient(135deg, #FF8A00 0%, #FF32A9 100%);
+}
+
+@layer base {
+  :root {
+    background-color: #0A1329;
+    color: #C0C0C0;
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    sans-serif;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: white;
+}
+
+.glass-morphism {
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.solution-card-hover {
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.solution-card-hover:hover {
+  transform: translateY(-8px);
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(122, 50, 255, 0.5);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 30px rgba(122, 50, 255, 0.15);
+}
+
+.nav-link-active {
+  color: white !important;
+  position: relative;
+}
+
+.nav-link-active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--background-image-brand-gradient);
+  border-radius: 2px;
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #7a32ff 0%, #00e5ff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-warm {
+  background: linear-gradient(135deg, #FF8A00 0%, #FF32A9 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes float {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(2%, 5%) scale(1.1); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+
+.animate-float {
+  animation: float 20s ease-in-out infinite;
+}
+
+.bg-blob {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.15;
+  pointer-events: none;
+  z-index: 0;
+}
