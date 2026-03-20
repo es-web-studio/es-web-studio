@@ -48,7 +48,7 @@ const Solutions = () => {
         muted
         loop
         playsInline
-        poster="/assets/bg_solutions_poster.jpg"
+        // poster="/assets/bg_solutions_poster.jpg"
         className="absolute inset-0 w-full h-full object-cover opacity-60"
         style={{ willChange: 'transform' }}
       >
