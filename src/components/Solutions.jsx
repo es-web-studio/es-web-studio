@@ -48,8 +48,7 @@ const Solutions = () => {
         muted
         loop
         playsInline
-        poster="/assets/bg_solutions_poster.jpg"
-        className="absolute inset-0 w-full h-full object-cover opacity-60"
+        className="absolute inset-0 w-full h-full object-cover opacity-60 bg-black"
         style={{ willChange: 'transform' }}
       >
         <source src="/assets/bg_solutions.mp4" type="video/mp4" />
